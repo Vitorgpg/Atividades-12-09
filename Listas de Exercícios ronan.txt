@@ -82,7 +82,7 @@ if (preco) {
 
 
 
-5-/*
+
 Elabore um algoritmo que calcule o valor a ser pago por um produto considerando a quantidade, o preço e a escolha da condição de pagamento. 
 Utilize os códigos da tabela a seguir e efetuar o cálculo adequado.
 Código =>  Condição Pagamento
