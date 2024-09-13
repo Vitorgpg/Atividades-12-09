@@ -1,0 +1,185 @@
+/*
+1 - Crie um programa que leia um número inteiro e informe se ele é positivo, negativo ou zero.
+ */
+ var numero = prompt("Digite um número inteiro:");
+
+ if (numero > 0) {
+    console.log("O número é positivo.");
+  } else if (numero < 0) {
+    console.log("O número é negativo.");
+  } else {
+    console.log("O número é zero.");
+}
+
+
+
+/*
+2 - Desenvolva um programa que leia a idade do usuário e informe a categoria de filme adequada: "Livre", "12 anos", "14 anos", "16 anos" ou "18 anos".
+*/
+
+var idade = prompt("Digite sua idade:");
+
+if (idade >= 18) {
+    console.log("A categoria de filme adequada é: 18 anos.");
+} else if (idade >= 16) {
+    console.log("A categoria de filme adequada é: 16 anos.");
+} else if (idade >= 14) {
+    console.log("A categoria de filme adequada é: 14 anos.");
+} else if (idade >= 12) {
+    console.log("A categoria de filme adequada é: 12 anos.");
+} else {
+    console.log("A categoria de filme adequada é: Livre.");
+}
+
+
+
+
+/*
+3 - Desenvolva um programa que calcule o valor do frete para uma compra: frete grátis para compras acima de R$ 300,00; caso contrário, calcule o frete de R$ 50,00.
+*/
+var valorCompra = prompt("Digite o valor total da sua compra:");
+
+if (valorCompra >= 300) {
+    console.log("Frete grátis.");
+} else {
+    console.log("O valor do frete é: R$ 50,00.");
+}
+
+4-/*
+O cardápio de uma lanchonete é o seguinte:
+Especificação Preço unitário 
+100 Cachorro quente 1,10 \n
+101 Bauru simples 1,30 
+102 Bauru c/ovo 1,50 
+103 Hamburger 1,10 
+104 Cheeseburger 1,30 
+
+Escrever um algoritmo que leia o código do lanche pedido, a quantidade e calcule o valor a ser pago por aquele lanche. 
+*/
+var codigoLanche = prompt("Digite o código do lanche:");
+var quantidade = prompt("Digite a quantidade:");
+
+var preco;
+
+if (codigoLanche == 100) {
+    preco = 1.10;
+} else if (codigoLanche == 101) {
+    preco = 1.30;
+} else if (codigoLanche == 102) {
+    preco = 1.50;
+} else if (codigoLanche == 103) {
+    preco = 1.10;
+} else if (codigoLanche == 104) {
+    preco = 1.30;
+} else {
+    console.log("Código inválido.");
+}
+
+if (preco) {
+    var valorTotal = preco * quantidade;
+    console.log("O valor total a ser pago é: R$ " + valorTotal.toFixed(2));
+}
+
+
+
+5-/*
+Elabore um algoritmo que calcule o valor a ser pago por um produto considerando a quantidade, o preço e a escolha da condição de pagamento. 
+Utilize os códigos da tabela a seguir e efetuar o cálculo adequado.
+Código =>  Condição Pagamento
+1      => À vista, dinheiro ou cheque, 10% de desconto
+2      => À vista, cartão de credito, 5% de desconto
+3      => Em 2 vezes, preço sem juros
+4      => Em 3 vezes, preço + 10% de juros
+*/
+
+/*
+6-Crie um programa que leia um número inteiro e informe se ele é par ou impar.
+*/
+var numero = prompt("Digite um número inteiro:");
+
+if (numero % 2 == 0) {
+    console.log("O número " + numero + " é par.");
+} else {
+    console.log("O número " + numero + " é ímpar.");
+}
+
+/*
+7-
+Apresente o Menu de Pizzas:
+1 -> Mussarela -> R$ 20,00
+2 -> Calabresa -> R$ 25,00
+3 -> Marguerita -> R$ 23,00
+4 -> 4 Queijos -> R$ 29,99
+5 -> Baiana -> 22,50
+
+Apresente o Menu de Bebidas:
+1 -> Refrigerante Lata -> R$ 5,00
+2 -> Refrigerante 2L -> R$ 10,00
+3 -> Agua -> R$ 3,50
+4 -> Suco -> R$ 7,50
+
+8-Solicite ao usuário qual Pizza e quantidade que deseja comprar, qual refrigerante e quantidade, ao final apresente o total a pagar.
+*/
+
+
+console.log("Menu de Pizzas:");
+console.log("1 -> Mussarela -> R$ 20,00");
+console.log("2 -> Calabresa -> R$ 25,00");
+console.log("3 -> Marguerita -> R$ 23,00");
+console.log("4 -> 4 Queijos -> R$ 29,99");
+console.log("5 -> Baiana -> R$ 22,50");
+
+
+console.log("\nMenu de Bebidas:");
+console.log("1 -> Refrigerante Lata -> R$ 5,00");
+console.log("2 -> Refrigerante 2L -> R$ 10,00");
+console.log("3 -> Agua -> R$ 3,50");
+console.log("4 -> Suco -> R$ 7,50");
+
+
+var pizzaEscolhida = prompt("Escolha o número da pizza:");
+var quantidadePizza = prompt("Digite a quantidade de pizzas:");
+
+
+var bebidaEscolhida = prompt("Escolha o número da bebida:");
+var quantidadeBebida = prompt("Digite a quantidade de bebidas:");
+
+var precoPizza = 0;
+var precoBebida = 0;
+
+
+if (pizzaEscolhida == 1) {
+    precoPizza = 20.00;
+} else if (pizzaEscolhida == 2) {
+    precoPizza = 25.00;
+} else if (pizzaEscolhida == 3) {
+    precoPizza = 23.00;
+} else if (pizzaEscolhida == 4) {
+    precoPizza = 29.99;
+} else if (pizzaEscolhida == 5) {
+    precoPizza = 22.50;
+} else {
+    console.log("Opção de pizza inválida.");
+}
+
+
+if (bebidaEscolhida == 1) {
+    precoBebida = 5.00;
+} else if (bebidaEscolhida == 2) {
+    precoBebida = 10.00;
+} else if (bebidaEscolhida == 3) {
+    precoBebida = 3.50;
+} else if (bebidaEscolhida == 4) {
+    precoBebida = 7.50;
+} else {
+    console.log("Opção de bebida inválida.");
+}
+
+
+var totalPizza = precoPizza * quantidadePizza;
+var totalBebida = precoBebida * quantidadeBebida;
+var totalPagar = totalPizza + totalBebida;
+
+if (totalPagar > 0) {
+    console.log("O valor total a pagar é: R$ " + totalPagar.toFixed(2));
+}
