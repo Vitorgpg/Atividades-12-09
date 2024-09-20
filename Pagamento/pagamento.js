@@ -21,10 +21,12 @@ if (codigoPagamento == 1) {
     console.log("Pagamento à vista, cartão de crédito. Valor final: R$ " + valorFinal.toFixed(2));
 } else if (codigoPagamento == 3) {
     valorFinal = valorTotal;  
-    console.log("Pagamento em 2 vezes. Valor final: R$ " + valorFinal.toFixed(2));
+    const valorParcela2x = valorFinal / 2;
+    console.log("Pagamento em 2 vezes. Valor final: R$ " + valorFinal.toFixed(2) + " | Valor da parcela: R$ " + valorParcela2x.toFixed(2));
 } else if (codigoPagamento == 4) {
     valorFinal = valorTotal * 1.10; 
-    console.log("Pagamento em 3 vezes com 10% de juros. Valor final: R$ " + valorFinal.toFixed(2));
+    const valorParcela3x = valorFinal / 3;
+    console.log("Pagamento em 3 vezes com 10% de juros. Valor final: R$ " + valorFinal.toFixed(2) + " | Valor da parcela: R$ " + valorParcela3x.toFixed(2));
 } else {
     console.log("Código de pagamento inválido.");
 }
